@@ -1,15 +1,21 @@
 package com.hbt.semillero.servicios;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.hbt.semillero.dto.ComicDTO;
 import com.hbt.semillero.entidades.EstadoEnum;
+import com.heinsohn.semillero.pojo.GestionarComicPOJO;
+
 /**
  * 
- * <b>Descripción:<b> Clase encargada de ejecutar las pruebas unitarias
- * <b>Caso de Uso:<b> 
+ * <b>Descripción:<b> Clase encargada de ejecutar las pruebas unitarias <b>Caso
+ * de Uso:<b>
+ * 
  * @author David Castellanos
  * @version
  */
@@ -21,8 +27,8 @@ public class AppTest {
 
 	/**
 	 * 
-	 * Metodo encargado de invertir una cadena
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de invertir una cadena <b>Caso de Uso</b>
+	 * 
 	 * @author David Castellanos
 	 * 
 	 * @param cadena cadena a invertir
@@ -44,12 +50,12 @@ public class AppTest {
 
 	/**
 	 * 
-	 * Metodo encargado de 
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de <b>Caso de Uso</b>
+	 * 
 	 * @author David Castellanos
 	 *
 	 */
-	@Test
+	@Test(enabled = false)
 	public void primeraPU() {
 		Long a = 100L;
 		Long b = 50L;
@@ -61,12 +67,13 @@ public class AppTest {
 
 	/**
 	 * 
-	 * Metodo encargado de probar el método invertirCadena(String cadena)
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de probar el método invertirCadena(String cadena) <b>Caso de
+	 * Uso</b>
+	 * 
 	 * @author David Castellanos
 	 *
 	 */
-	@Test
+	@Test(enabled = false)
 	public void segundaPU() {
 		String resultado = invertirCadena("");
 		String resultadoEsperado = "";
@@ -132,7 +139,7 @@ public class AppTest {
 	 * @author David Castellanos
 	 *
 	 */
-	@Test
+	@Test(enabled = false)
 	public void terceraPU() {
 		// Instanciar un enum de la clase EstadoEnum
 		EstadoEnum estadoEnum = EstadoEnum.ACTIVO;
@@ -164,4 +171,81 @@ public class AppTest {
 				"Se esperaba '" + resultadoEsperado3 + "' pero el método retornó '" + resultado3 + "'");
 
 	}
+
+	/**
+	 * 
+	 * Metodo encargado de probar el método crearComicDTO de la clase
+	 * GestionarComicPOJO <b>Caso de Uso</b>
+	 * 
+	 * @author David Castellanos
+	 *
+	 */
+	@Test(enabled = true)
+	public void crearComicDTOTest() {
+		GestionarComicPOJO gestion = new GestionarComicPOJO();
+		ComicDTO comicDTO = gestion.crearComicDTO("1", "Dragon Ball", "Planeta Cómic", "AVENTURAS", "Manga Shonen", 100,
+				new BigDecimal(123), "Dragon Garow Lee", Boolean.FALSE, LocalDate.now(), "ACTIVO", 20L);
+		gestion.agregarComicDTOLista(comicDTO);
+		Assert.assertNotNull(gestion.getListaComics());
+		Assert.assertTrue(gestion.getListaComics().size() > 0);
+
+		// Esta es preferible a la anterior
+		Assert.assertTrue(!gestion.getListaComics().isEmpty());
+
+		Assert.assertEquals(1, gestion.getListaComics().size());
+
+		comicDTO = new ComicDTO();
+		comicDTO.setId("2");
+		comicDTO.setNombre("Dragon Ball");
+		comicDTO.setEditorial("Planeta Cómic");
+		comicDTO.setTematicaEnum("AVENTURAS");
+		comicDTO.setColeccion("Manga Shonen");
+		comicDTO.setNumeroPaginas(100);
+		comicDTO.setPrecio(new BigDecimal(2100));
+		comicDTO.setAutores("Dragon Garow Lee");
+		comicDTO.setAcolor(Boolean.FALSE);
+		comicDTO.setFechaVenta(LocalDate.now());
+		comicDTO.setEstado("ACTIVO");
+		comicDTO.setCantidad(20L);
+
+		gestion.agregarComicDTOLista(comicDTO);
+		Assert.assertTrue(gestion.getListaComics().size() > 1);
+
+		comicDTO = new ComicDTO();
+		comicDTO.setId("3");
+		comicDTO.setNombre("Dragon Ball Yamcha");
+		comicDTO.setEditorial("Planeta Cómic");
+		comicDTO.setTematicaEnum("AVENTURAS");
+		comicDTO.setColeccion("Manga Shonen");
+		comicDTO.setNumeroPaginas(100);
+		comicDTO.setPrecio(new BigDecimal(2100));
+		comicDTO.setAutores("Dragon Garow Lee");
+		comicDTO.setAcolor(Boolean.FALSE);
+		comicDTO.setFechaVenta(LocalDate.now());
+		comicDTO.setEstado("ACTIVO");
+		comicDTO.setCantidad(20L);
+
+		gestion.agregarComicDTOLista(comicDTO);
+		Assert.assertTrue(gestion.getListaComics().size() > 2);
+	}
+
+	/**
+	 * 
+	 * Metodo encargado de probar el método modificarNombreComic de la clase
+	 * GestionarComicPOJO 
+	 * <b>Caso de Uso</b>
+	 * 
+	 * @author David Castellanos
+	 *
+	 */
+	@Test(enabled = false)
+	public void modificarNombreComicTest() {
+		Long a = 100L;
+		Long b = 50L;
+		Long resultadoEsperado = 150L;
+		Long resultado = a + b;
+
+		Assert.assertEquals(resultado, resultadoEsperado);
+	}
+
 }
