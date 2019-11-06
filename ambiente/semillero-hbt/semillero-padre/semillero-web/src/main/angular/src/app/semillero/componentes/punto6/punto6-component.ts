@@ -72,6 +72,9 @@ export class Punto6Component implements OnInit {
         console.log(this.mapa);
     }
 
+    /**
+     * Método que alterna el valor de la variable urlImg
+     */
     public cambiarImg(): void {
         if (this.urlImg === "https://www.heinsohn.com.co/wp-content/uploads/2017/11/logo-hgs-pagina.png") {
             this.urlImg = "https://www.intersoftware.org.co/sites/default/files/logos_marcas_internas/logos-21.png";
