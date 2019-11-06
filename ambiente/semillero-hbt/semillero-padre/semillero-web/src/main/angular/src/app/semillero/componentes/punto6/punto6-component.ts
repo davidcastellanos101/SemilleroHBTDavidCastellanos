@@ -20,16 +20,16 @@ export class Punto6Component implements OnInit {
      * Variable global de tipo string que guarda la url de una imagen
      */
     public urlImg: String;
-    
+
     /**
      * attributo lista que guarda elemento de tipo any
      */
-    public lista : Array<any>;
+    public lista: Array<any>;
 
     /**
      * atributo mapa que guarda pares de datos any, any
      */
-    public mapa : Map<any,any>;
+    public mapa: Map<any, any>;
 
     /**
      * Constructor de la clase
@@ -38,7 +38,7 @@ export class Punto6Component implements OnInit {
         // Se inicializa la lista
         this.lista = new Array<any>();
         // Se inicializa el mapa
-        this.mapa = new Map<any,any>();  
+        this.mapa = new Map<any, any>();
         // Se inicializa la variable urlImg   
         this.urlImg = "https://www.intersoftware.org.co/sites/default/files/logos_marcas_internas/logos-21.png";
     }
@@ -52,7 +52,7 @@ export class Punto6Component implements OnInit {
 
         // Se inicializa la variable global
         this.variableGlobal = "variable global";
-        
+
         // Se introducen valores dentro de la lista
         this.lista.push(this.variableGlobal);
         this.lista.push(variableLocal);
@@ -63,13 +63,21 @@ export class Punto6Component implements OnInit {
         let booleano: boolean = true;
 
         // Se introducen datos dentro del mapa
-        this.mapa.set(this.variableGlobal,variableLocal);
-        this.mapa.set(1,2);
-        this.mapa.set(this.variableGlobal,variableLocal);
+        this.mapa.set(this.variableGlobal, variableLocal);
+        this.mapa.set(1, 2);
+        this.mapa.set(this.variableGlobal, variableLocal);
         this.mapa.set(mifecha, booleano);
 
         // Se imprime el mapa por consola
         console.log(this.mapa);
+    }
+
+    public cambiarImg(): void {
+        if (this.urlImg === "https://www.heinsohn.com.co/wp-content/uploads/2017/11/logo-hgs-pagina.png") {
+            this.urlImg = "https://www.intersoftware.org.co/sites/default/files/logos_marcas_internas/logos-21.png";
+        } else {
+            this.urlImg = "https://www.heinsohn.com.co/wp-content/uploads/2017/11/logo-hgs-pagina.png";
+        }
     }
 
 }
