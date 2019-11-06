@@ -57,5 +57,12 @@ export class MiObjetoDTO {
 
 
 
+    public getJSON(): String{
+        return JSON.stringify(this);
+    }
+
+    public getArray(): Array<any>{
+        return Object.entries(this);
+    }
 
 }

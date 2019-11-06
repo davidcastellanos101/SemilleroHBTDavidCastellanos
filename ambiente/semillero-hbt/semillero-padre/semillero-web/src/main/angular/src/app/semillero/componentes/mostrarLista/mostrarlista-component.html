@@ -1,12 +1,12 @@
 <div style="float: left; margin-right: 50px; width: 30%;">
-    <h3>Formato JSON</h3>
-    <pre>{{listaJSON}}</pre>
-</div>
-<div style="float: left; margin-right: 50px; width: 30%;">
     <h3>Viñetas</h3>
     <ul *ngFor="let item of lista" class="list-group" style="margin-bottom: 50px;">
-        <li *ngFor="let attributo of item | keyvalue" class="list-group-item">{{attributo.key}}:{{attributo.value}}</li>
+        <li *ngFor="let attributo of item.getArray()" class="list-group-item">{{attributo[0] + ":" + attributo[1]}}</li>
     </ul>
+</div>
+<div style="float: left; margin-right: 50px; width: 30%;">
+    <h3>Formato JSON</h3>
+    <pre>{{listaJSON}}</pre>
 </div>
 <div style="float: left; width: 30%;">
     <button (click)="eliminarObjeto(3)" class="btn btn-primary">Eliminar objeto con indice 3 de la lista</button>
