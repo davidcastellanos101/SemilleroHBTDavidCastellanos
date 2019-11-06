@@ -44,6 +44,7 @@ public class Comic implements Serializable {
 	private EstadoEnum estadoEnum;
 	private Long cantidad;
 
+
 	/**
 	 * Constructor de la clase.
 	 */

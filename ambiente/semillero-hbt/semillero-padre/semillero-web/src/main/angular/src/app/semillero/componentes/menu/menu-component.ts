@@ -18,7 +18,6 @@ export class MenuComponent implements OnInit {
    * @param router permite direccionar a otros componentes
    */
   constructor(private router: Router) {
-
   }
 
   /**
@@ -42,6 +41,22 @@ export class MenuComponent implements OnInit {
    */
   public navegarHome(): void {
     this.router.navigate(['bienvenida']);
+  }
+
+  /**
+   * @description Metodo encargado de direccionar al componente de MostrarLista
+   * @author David Ernesto Castellanos Rodríguez <davidcastellanos101@gmail.com>
+   */
+  public navegarMostarLista(): void {
+    this.router.navigate(['mostrarlista']);
+  }
+
+    /**
+   * @description Metodo encargado de direccionar al componente Punto6
+   * @author David Ernesto Castellanos Rodríguez <davidcastellanos101@gmail.com>
+   */
+  public navegarPunto6(): void {
+    this.router.navigate(['punto6']);
   }
 
   public navegarGestionarCompra(): void {
