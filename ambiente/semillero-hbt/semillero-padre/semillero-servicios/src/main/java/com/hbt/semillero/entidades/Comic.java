@@ -17,6 +17,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.hbt.semillero.dto.ComicDTO;
+
 /**
  * <b>Descripción:<b> Clase que determina <b>Caso de Uso:<b>
  * 
@@ -31,7 +33,7 @@ public class Comic implements Serializable {
 	 * Atributo que determina
 	 */
 	private static final long serialVersionUID = 4322034079745146450L;
-	private String id;
+	private Long id;
 	private String nombre;
 	private String editorial;
 	private TematicaEnum tematicaEnum;
@@ -52,6 +54,7 @@ public class Comic implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 
 	/**
 	 * Metodo encargado de retornar el valor del atributo id
@@ -62,7 +65,7 @@ public class Comic implements Serializable {
 	@SequenceGenerator(allocationSize = 1, name = "COMIC_SCID_GENERATOR", sequenceName = "SEQ_COMIC")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "COMIC_SCID_GENERATOR")
 	@Column(name = "SCID")
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
@@ -71,7 +74,7 @@ public class Comic implements Serializable {
 	 * 
 	 * @param id El nuevo id a modificar.
 	 */
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -285,6 +288,7 @@ public class Comic implements Serializable {
 	public void setCantidad(Long cantidad) {
 		this.cantidad = cantidad;
 	}
+	
 
 	/**
 	 * @see java.lang.Object#toString()

@@ -16,7 +16,7 @@
 	<name>Semillero HBT [REST]</name>
 
 	<properties>
-			<maven.test.skip>false</maven.test.skip>
+		<maven.test.skip>false</maven.test.skip>
 	</properties>
 
 	<build>
@@ -26,6 +26,7 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+		
 	</build>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
@@ -68,18 +69,18 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
-		    <groupId>org.testng</groupId>
-		    <artifactId>testng</artifactId>
-		    <version>7.0.0</version>
-		    <scope>test</scope>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.0.0</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- Dependencia para el manejo de la persistencia -->
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-		  <version>5.2.12.Final</version>
+			<version>5.2.12.Final</version>
 		</dependency>
-		
+
 	</dependencies>
 </project>
