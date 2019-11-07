@@ -14,14 +14,14 @@ import com.hbt.semillero.dto.ComicDTO;
 import com.hbt.semillero.ejb.IGestionarComicLocal;
 
 /**
- * <b>Descripción:<b> Clase que determina
- * <b>Caso de Uso:<b> 
+ * <b>Descripción:<b> Clase que determina <b>Caso de Uso:<b>
+ * 
  * @author Dave
- * @version 
+ * @version
  */
 @Path("/GestionarComic")
-public class GestionarComicRest{
-	
+public class GestionarComicRest {
+
 	@EJB
 	private IGestionarComicLocal gestionComicEJB;
 
@@ -30,12 +30,13 @@ public class GestionarComicRest{
 	 */
 	public GestionarComicRest() {
 		super();
-		
+
 	}
+
 	/**
 	 * 
-	 * Metodo encargado de 
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de imprimir un saludo <b>Caso de Uso</b>
+	 * 
 	 * @author Dave
 	 * 
 	 * @return
@@ -46,11 +47,11 @@ public class GestionarComicRest{
 	public String primerRest() {
 		return "oli";
 	}
-	
+
 	/**
 	 * 
-	 * Metodo encargado de 
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de consultar un comic a partir de su id <b>Caso de Uso</b>
+	 * 
 	 * @author Dave
 	 * 
 	 * @param idComic
@@ -66,5 +67,24 @@ public class GestionarComicRest{
 		return null;
 	}
 
-	
+	/**
+	 * 
+	 * Metodo encargado de <b>Caso de Uso</b>
+	 * 
+	 * @author Dave
+	 * 
+	 * @param idComic
+	 * @return
+	 */
+	@GET
+	@Path("/eliminarComic")
+	@Produces(MediaType.APPLICATION_JSON)
+	public ComicDTO eliminarComic(@QueryParam("idComic") Long idComic) {
+		// terminar de implementar
+		if (idComic != null) {
+			return gestionComicEJB.consultarComic(idComic);
+		}
+		return null;
+	}
+
 }

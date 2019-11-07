@@ -25,7 +25,6 @@ import com.hbt.semillero.entidades.TematicaEnum;
  */
 @Stateless
 public class GestionarComicBean implements IGestionarComicLocal {
-	// TODO agregar interfaz
 
 	@PersistenceContext
 	private EntityManager em;
@@ -115,8 +114,12 @@ public class GestionarComicBean implements IGestionarComicLocal {
 	 * @see com.hbt.semillero.ejb.IGestionarComicLocal#eliminarComic(java.lang.Long)
 	 */
 	@Override
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void eliminarComic(Long idComic) {
-		// TODO este método es la tarea
+		Comic found = em.find(Comic.class, idComic);
+		if (found != null) {
+			em.remove(found);
+		}
 
 	}
 
@@ -136,7 +139,7 @@ public class GestionarComicBean implements IGestionarComicLocal {
 
 	/**
 	 * 
-	 * Metodo encargado de <b>Caso de Uso</b>
+	 * Metodo encargado de convertir un objeto ComicDTO a Comic <b>Caso de Uso</b>
 	 * 
 	 * @author Dave
 	 * 
@@ -162,7 +165,7 @@ public class GestionarComicBean implements IGestionarComicLocal {
 
 	/**
 	 * 
-	 * Metodo encargado de <b>Caso de Uso</b>
+	 * Metodo encargado de convertir un objeto Comic a ComicDTO <b>Caso de Uso</b>
 	 * 
 	 * @author Dave
 	 * 
