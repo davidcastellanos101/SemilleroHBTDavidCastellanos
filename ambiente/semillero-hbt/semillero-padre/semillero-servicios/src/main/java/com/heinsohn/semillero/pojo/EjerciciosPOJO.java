@@ -218,7 +218,7 @@ public class EjerciciosPOJO {
 		
 		int numero2 = digito1n2 + digito2n2; //8
 		
-		int numeroObjetivo = 0;
+		int numeroObjetivo = 0; //debería ser 10
 		String digito1 = "";
 		String digito2 = "";
 		while (numeroObjetivo != numero2+1) {
