@@ -188,7 +188,7 @@ public class EjerciciosPOJO {
 	
 	/**
 	 * 
-	 * Metodo encargado de 
+	 * Metodo encargado de responder la pregunta 9
 	 * <b>Caso de Uso</b>
 	 * @author Dave
 	 *
