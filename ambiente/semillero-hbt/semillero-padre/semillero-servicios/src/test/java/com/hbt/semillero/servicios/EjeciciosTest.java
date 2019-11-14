@@ -180,18 +180,5 @@ public class EjeciciosTest {
 
 	}
 	
-	/**
-	 * ejercicio9
-	 * Metodo encargado de 
-	 * <b>Caso de Uso</b>
-	 * @author Dave
-	 *
-	 */
-	@Test(enabled = true)
-	public void ejercicio9() {
-		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
-
-
-	}
 
 }

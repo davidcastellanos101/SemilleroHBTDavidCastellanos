@@ -195,8 +195,6 @@ public class EjerciciosPOJO {
 	 */
 	public void ejercicio9(){
 		//Opciones B y D
-
-
 	}
 
 }
