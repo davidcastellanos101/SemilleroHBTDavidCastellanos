@@ -3,6 +3,8 @@
  */
 package com.hbt.semillero.servicios;
 
+import java.time.LocalDate;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -82,7 +84,23 @@ public class EjeciciosTest {
 		int n3 = 0;
 		Assert.assertTrue(ejercicios.esPrimo(n1)); //Esta prueba pasara exitosamente
 		Assert.assertTrue(ejercicios.esPrimo(n2)); //Esta prueba no pasará, 222 no es primo
-		Assert.assertTrue(ejercicios.esPrimo(n3)); //Esta prueba pasara exitosamente
+		Assert.assertTrue(ejercicios.esPrimo(n3)); //Esta prueba no pasará, 0 no es primo
+	}
+	
+	/**
+	 * ejercicio4
+	 * Metodo encargado de probar el método getAnios()
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 *
+	 */
+	@Test(enabled = true)
+	public void ejercicio4() {
+		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
+		LocalDate fecha = LocalDate.of(1995, 3, 11);
+		
+		Assert.assertEquals(ejercicios.getAnios(fecha), 24); //pasará la prueba, tengo 24 años :)
+
 	}
 
 }

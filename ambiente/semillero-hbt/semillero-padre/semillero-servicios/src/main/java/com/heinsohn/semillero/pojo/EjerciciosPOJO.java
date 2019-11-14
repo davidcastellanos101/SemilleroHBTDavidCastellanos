@@ -3,6 +3,8 @@
  */
 package com.heinsohn.semillero.pojo;
 
+import java.time.LocalDate;
+
 /**
  * <b>Descripción:<b> Clase que determina
  * <b>Caso de Uso:<b> 
@@ -47,6 +49,23 @@ public class EjerciciosPOJO {
 			return true;
 		}
 		return false;
+	}
+	
+	/**
+	 * 
+	 * Metodo encargado de calcular la edad de una persona
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 * 
+	 * @param fechaNacimiento
+	 * @return
+	 */
+	public int getAnios(LocalDate fechaNacimiento) {
+		LocalDate fechaActual = LocalDate.now();
+		int anioActual = fechaActual.getYear();
+		int anioNacimiento = fechaNacimiento.getYear();
+		
+		return anioActual - anioNacimiento;
 	}
 
 }
