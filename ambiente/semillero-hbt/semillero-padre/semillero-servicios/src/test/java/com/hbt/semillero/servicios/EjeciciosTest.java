@@ -142,13 +142,16 @@ public class EjeciciosTest {
 	@Test(enabled = true)
 	public void ejercicio7() {
 		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
+		//Se agregan los puntos de los sets
 		ArrayList<Integer> setsRoger = new ArrayList<Integer>();
 		setsRoger.add(3);
 		setsRoger.add(2);
+		//Se agregan los puntos de los sets
 		ArrayList<Integer> setsDominic = new ArrayList<Integer>();
 		setsDominic.add(6);
 		setsDominic.add(2);
 		
+		//Se agregan los sets y los jugadores al mapa
 		ejercicios.getPartido().put("Roger Federer", setsRoger);
 		ejercicios.getPartido().put("Dominic", setsDominic);
 		
