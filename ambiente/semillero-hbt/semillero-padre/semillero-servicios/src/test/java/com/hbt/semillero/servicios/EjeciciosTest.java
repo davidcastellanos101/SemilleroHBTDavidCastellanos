@@ -179,5 +179,19 @@ public class EjeciciosTest {
 		Assert.assertEquals(monedas5550.get(4).intValue(), 1);
 
 	}
+	
+	/**
+	 * ejercicio9
+	 * Metodo encargado de 
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 *
+	 */
+	@Test(enabled = true)
+	public void ejercicio9() {
+		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
+
+
+	}
 
 }

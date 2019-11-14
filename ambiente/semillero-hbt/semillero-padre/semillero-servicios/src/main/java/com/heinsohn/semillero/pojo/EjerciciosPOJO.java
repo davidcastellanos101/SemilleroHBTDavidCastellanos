@@ -134,10 +134,15 @@ public class EjerciciosPOJO {
 	 */
 	public ArrayList<Integer> getCambioMonedas(int cambio) {
 		ArrayList<Integer> monedas = new ArrayList<Integer>();
+		//cantidad de monedas de 1000
 		monedas.add(0);
+		//cantidad de monedas de 500
 		monedas.add(0);
+		//cantidad de monedas de 200
 		monedas.add(0);
+		//cantidad de monedas de 100
 		monedas.add(0);
+		//cantidad de monedas de 50
 		monedas.add(0);
 		int cantidad = 0;
 		while (cambio >= 1000) {
@@ -179,6 +184,19 @@ public class EjerciciosPOJO {
 	 */
 	public Map<String, ArrayList<Integer>> getPartido() {
 		return partido;
+	}
+	
+	/**
+	 * 
+	 * Metodo encargado de 
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 *
+	 */
+	public void ejercicio9(){
+		//Opciones B y D
+
+
 	}
 
 }
