@@ -211,12 +211,12 @@ public class EjerciciosPOJO {
 		int digito1n1 = Integer.parseInt(n1.substring(0, 1));
 		int digito2n1 = Integer.parseInt(n1.substring(1, 2));
 		
-		int numero1 = digito1n1 + digito2n1;
+		int numero1 = digito1n1 + digito2n1; //7
 		
 		int digito1n2 = Integer.parseInt(n2.substring(0, 1));
 		int digito2n2 = Integer.parseInt(n2.substring(1, 2));
 		
-		int numero2 = digito1n2 + digito2n2;
+		int numero2 = digito1n2 + digito2n2; //8
 		
 		int numeroObjetivo = 0;
 		String digito1 = "";
