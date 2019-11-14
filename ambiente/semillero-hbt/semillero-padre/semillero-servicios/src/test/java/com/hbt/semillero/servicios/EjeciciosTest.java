@@ -21,7 +21,7 @@ public class EjeciciosTest {
 
 	/**
 	 * 
-	 * Metodo encargado de 
+	 * ejercicio 1
 	 * <b>Caso de Uso</b>
 	 * @author Dave
 	 *
@@ -49,7 +49,7 @@ public class EjeciciosTest {
 
 	/**
 	 * 
-	 * Metodo encargado de 
+	 * ejercicio2
 	 * <b>Caso de Uso</b>
 	 * @author Dave
 	 *
@@ -67,10 +67,8 @@ public class EjeciciosTest {
 	}
 
 
-
-
 	/**
-	 * 
+	 * ejercicio3
 	 * Metodo encargado de probar el método esPrimo()
 	 * <b>Caso de Uso</b>
 	 * @author Dave
@@ -82,9 +80,9 @@ public class EjeciciosTest {
 		int n1 = 5;
 		int n2 = 222;
 		int n3 = 0;
-		Assert.assertTrue(ejercicios.esPrimo(n1)); //Esta pruba pasara exitosamente
+		Assert.assertTrue(ejercicios.esPrimo(n1)); //Esta prueba pasara exitosamente
 		Assert.assertTrue(ejercicios.esPrimo(n2)); //Esta prueba no pasará, 222 no es primo
-		Assert.assertTrue(ejercicios.esPrimo(n3)); //Esta pruba pasara exitosamente
+		Assert.assertTrue(ejercicios.esPrimo(n3)); //Esta prueba pasara exitosamente
 	}
 
 }
