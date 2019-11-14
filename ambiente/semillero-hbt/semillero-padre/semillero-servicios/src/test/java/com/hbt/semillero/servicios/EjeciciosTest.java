@@ -142,15 +142,15 @@ public class EjeciciosTest {
 	@Test(enabled = true)
 	public void ejercicio7() {
 		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
-		ArrayList<Integer> setRoger = new ArrayList<Integer>();
-		setRoger.add(3);
-		setRoger.add(2);
-		ArrayList<Integer> setDominic = new ArrayList<Integer>();
-		setDominic.add(6);
-		setDominic.add(2);
+		ArrayList<Integer> setsRoger = new ArrayList<Integer>();
+		setsRoger.add(3);
+		setsRoger.add(2);
+		ArrayList<Integer> setsDominic = new ArrayList<Integer>();
+		setsDominic.add(6);
+		setsDominic.add(2);
 		
-		ejercicios.getPartido().put("Roger Federer", setRoger);
-		ejercicios.getPartido().put("Dominic", setDominic);
+		ejercicios.getPartido().put("Roger Federer", setsRoger);
+		ejercicios.getPartido().put("Dominic", setsDominic);
 		
 		Assert.assertEquals(ejercicios.getGanador(), "Dominic");
 
