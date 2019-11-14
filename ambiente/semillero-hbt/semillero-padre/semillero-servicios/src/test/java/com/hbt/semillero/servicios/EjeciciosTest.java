@@ -103,5 +103,31 @@ public class EjeciciosTest {
 		Assert.assertEquals(anioActual, 2019); //pasará la prueba
 
 	}
+	
+	/**
+	 * ejercicio5
+	 * Metodo encargado de probar el orden de la lista listaEjercicio5
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 *
+	 */
+	@Test(enabled = true)
+	public void ejercicio5() {
+		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
+		int n1 = 50;
+		int n2 = 1;
+		int n3 = 249;
+		int n4 = -2;
+		ejercicios.agregarNumeroLista5(n1);
+		ejercicios.agregarNumeroLista5(n2);
+		ejercicios.agregarNumeroLista5(n3);
+		ejercicios.agregarNumeroLista5(n4);
+		
+		ejercicios.organizarElementosLista5();
+		Assert.assertEquals(n4, ejercicios.getListaEjercicio5().get(0).intValue()); //pasará la prueba
+		Assert.assertEquals(n3, ejercicios.getListaEjercicio5().get(3).intValue()); //pasará la prueba
+		Assert.assertEquals(4, ejercicios.getListaEjercicio5().size()); //pasará la prueba
+
+	}
 
 }
