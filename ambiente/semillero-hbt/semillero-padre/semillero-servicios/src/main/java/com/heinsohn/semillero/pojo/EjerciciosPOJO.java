@@ -31,7 +31,7 @@ public class EjerciciosPOJO {
 	 * @return
 	 */
 	public boolean esPrimo(int n) {
-		if (n == 0) {
+		if (n == 0 || n == 1) {
 			return false;
 		}
 		int contador = 0;
