@@ -36,11 +36,11 @@ public class EjeciciosTest {
 	
 	@Test(enabled = true)
 	public void ejercicio2() {
-		WaterBottle wb = new WaterBottle();
-		System.out.println("Empty = "+ wb.empty());
-		System.out.println(", Brand = " + wb.brand());	
+		//WaterBottle wb = new WaterBottle();
+		//System.out.println("Empty = "+ empty);
+		//.out.println(", Brand = " + brand);	
 		
-		//este método gatillará un excelcion de tipo ClassNotFoundException ya que la clase WaterBottle no existe
+		//este método gatillará la excepción java.lang.Error ya que las variables no estpa inicializada
 	}
 
 }
