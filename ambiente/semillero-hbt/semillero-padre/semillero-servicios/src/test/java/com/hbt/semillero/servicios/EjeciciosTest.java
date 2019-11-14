@@ -180,5 +180,22 @@ public class EjeciciosTest {
 
 	}
 	
+	/**
+	 * ejercicio11
+	 * Metodo encargado de probar el metodo serie
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 *
+	 */
+	@Test(enabled = true)
+	public void ejercicio11() {
+		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
+		
+		Assert.assertEquals(ejercicios.getSiguienteNumero("80", "36"), "46");
+
+	}
+	
+	
+	
 
 }

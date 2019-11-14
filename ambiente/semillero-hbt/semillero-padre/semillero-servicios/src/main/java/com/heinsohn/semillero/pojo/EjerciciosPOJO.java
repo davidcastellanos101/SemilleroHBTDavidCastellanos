@@ -196,5 +196,45 @@ public class EjerciciosPOJO {
 	public void ejercicio9(){
 		//Opciones B y D
 	}
+	
+	/**
+	 * 
+	 * Metodo encargado de obtener el siguiente numero
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 * 
+	 * @param n1
+	 * @param n2
+	 * @return
+	 */
+	public String getSiguienteNumero(String n1, String n2) {
+		int digito1n1 = Integer.parseInt(n1.substring(0, 1));
+		int digito2n1 = Integer.parseInt(n1.substring(1, 2));
+		
+		int numero1 = digito1n1 + digito2n1;
+		
+		int digito1n2 = Integer.parseInt(n2.substring(0, 1));
+		int digito2n2 = Integer.parseInt(n2.substring(1, 2));
+		
+		int numero2 = digito1n2 + digito2n2;
+		
+		int numeroObjetivo = 0;
+		String digito1 = "";
+		String digito2 = "";
+		while (numeroObjetivo != numero2+1) {
+			for (int i = 0; i < 10; i++) {
+				for (int j = 0; j < 10; j++) {
+					if ((i+j) == (numero2+1)) {
+						digito1 = String.valueOf(i);
+						digito2 = String.valueOf(j);
+						numeroObjetivo =  numero2+1;
+					}
+				}
+			}
+			
+		}
+		
+		return digito1+digito2;
+	}
 
 }
