@@ -175,7 +175,8 @@ public class EjeciciosTest {
 		Assert.assertEquals(monedas1000.get(0).intValue(), 1);
 		
 		Assert.assertEquals(monedas5550.size(), 7);
-		Assert.assertEquals(monedas5550.get(0).intValue(), 5);
+		Assert.assertEquals(monedas5550.get(1).intValue(), 1);
+		Assert.assertEquals(monedas5550.get(4).intValue(), 1);
 
 	}
 
