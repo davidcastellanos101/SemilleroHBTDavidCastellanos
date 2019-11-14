@@ -11,18 +11,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <b>Descripción:<b> Clase que determina
- * <b>Caso de Uso:<b> 
+ * <b>Descripción:<b> Clase que determina <b>Caso de Uso:<b>
+ * 
  * @author Dave
- * @version 
+ * @version
  */
 public class EjerciciosPOJO {
-	
-	private ArrayList<Integer> listaEjercicio5; 
+
+	private ArrayList<Integer> listaEjercicio5;
 	private Map<String, ArrayList<Integer>> partido;
-	
-	
-	
+
 	/**
 	 * Constructor de la clase.
 	 */
@@ -34,8 +32,8 @@ public class EjerciciosPOJO {
 
 	/**
 	 * 
-	 * Metodo encargado de probar si un numero es primo
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de probar si un numero es primo <b>Caso de Uso</b>
+	 * 
 	 * @author Dave
 	 * 
 	 * @param n
@@ -59,11 +57,11 @@ public class EjerciciosPOJO {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * 
-	 * Metodo encargado de calcular la edad de una persona
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de calcular la edad de una persona <b>Caso de Uso</b>
+	 * 
 	 * @author Dave
 	 * 
 	 * @param fechaNacimiento
@@ -73,13 +71,15 @@ public class EjerciciosPOJO {
 		LocalDate fechaActual = LocalDate.now();
 		int anioActual = fechaActual.getYear();
 		int anioNacimiento = fechaNacimiento.getYear();
-		
+
 		return anioActual - anioNacimiento;
 	}
+
 	/**
 	 * 
-	 * Metodo encargado de agregar elementos a la lista listaEjercicio5
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de agregar elementos a la lista listaEjercicio5 <b>Caso de
+	 * Uso</b>
+	 * 
 	 * @author Dave
 	 * 
 	 * @param n
@@ -87,23 +87,23 @@ public class EjerciciosPOJO {
 	public void agregarNumeroLista5(int n) {
 		listaEjercicio5.add(n);
 	}
-	
+
 	/**
 	 * 
-	 * Metodo encargado de ordenar la lista listaEjercicio5
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de ordenar la lista listaEjercicio5 <b>Caso de Uso</b>
+	 * 
 	 * @author Dave
 	 *
 	 */
 	public void organizarElementosLista5() {
-		
+
 		Collections.sort(listaEjercicio5);
 	}
-	
+
 	/**
 	 * 
-	 * Metodo encargado de averiguar el ganador
-	 * <b>Caso de Uso</b>
+	 * Metodo encargado de averiguar el ganador <b>Caso de Uso</b>
+	 * 
 	 * @author Dave
 	 * 
 	 * @return
@@ -124,7 +124,48 @@ public class EjerciciosPOJO {
 	}
 
 	/**
+	 * 
+	 * Metodo encargado de contar monedas
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 * 
+	 * @param cambio
+	 * @return
+	 */
+	public ArrayList<Integer> getCambioMonedas(int cambio) {
+		ArrayList<Integer> monedas = new ArrayList<Integer>();
+		monedas.add(0);
+		monedas.add(0);
+		monedas.add(0);
+		monedas.add(0);
+		monedas.add(0);
+		int cantidad = 0;
+		while (cambio >= 1000) {
+			cambio = cambio - 1000;
+			monedas.set(0, monedas.get(0)+1);
+		}
+		while (cambio >= 500) {
+			cambio = cambio - 500;
+			monedas.set(0, monedas.get(1)+1);
+		}
+		while (cambio >= 200) {
+			cambio = cambio - 200;
+			monedas.set(0, monedas.get(2)+1);
+		}
+		while (cambio >= 100) {
+			cambio = cambio - 100;
+			monedas.set(0, monedas.get(3)+1);
+		}
+		while (cambio >= 50) {
+			cambio = cambio - 50;
+			monedas.set(0, monedas.get(4)+1);
+		}
+		return monedas;
+	}
+
+	/**
 	 * Metodo encargado de retornar el valor del atributo listaEjercicio5
+	 * 
 	 * @return El listaEjercicio5 asociado a la clase
 	 */
 	public ArrayList<Integer> getListaEjercicio5() {
@@ -133,12 +174,11 @@ public class EjerciciosPOJO {
 
 	/**
 	 * Metodo encargado de retornar el valor del atributo partido
+	 * 
 	 * @return El partido asociado a la clase
 	 */
 	public Map<String, ArrayList<Integer>> getPartido() {
 		return partido;
 	}
 
-
-	
 }

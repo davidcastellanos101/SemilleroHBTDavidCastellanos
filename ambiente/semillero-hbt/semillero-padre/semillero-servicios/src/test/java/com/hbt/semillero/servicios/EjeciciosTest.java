@@ -158,5 +158,25 @@ public class EjeciciosTest {
 		Assert.assertEquals(ejercicios.getGanador(), "Dominic");
 
 	}
+	
+	/**
+	 * ejercicio8
+	 * Metodo encargado de probar el metodo de contar monedas
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 *
+	 */
+	@Test(enabled = true)
+	public void ejercicio8() {
+		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
+		ArrayList<Integer> monedas1000 = ejercicios.getCambioMonedas(1000);
+		ArrayList<Integer> monedas5550 = ejercicios.getCambioMonedas(5550);
+		Assert.assertEquals(monedas1000.size(), 1);
+		Assert.assertEquals(monedas1000.get(0).intValue(), 1);
+		
+		Assert.assertEquals(monedas5550.size(), 7);
+		Assert.assertEquals(monedas5550.get(0).intValue(), 5);
+
+	}
 
 }
