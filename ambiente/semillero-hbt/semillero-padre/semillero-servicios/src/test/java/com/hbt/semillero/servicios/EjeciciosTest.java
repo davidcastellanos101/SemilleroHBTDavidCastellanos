@@ -4,6 +4,7 @@
 package com.hbt.semillero.servicios;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -124,9 +125,10 @@ public class EjeciciosTest {
 		ejercicios.agregarNumeroLista5(n4);
 		
 		ejercicios.organizarElementosLista5();
-		Assert.assertEquals(n4, ejercicios.getListaEjercicio5().get(0).intValue()); //pasará la prueba
-		Assert.assertEquals(n3, ejercicios.getListaEjercicio5().get(3).intValue()); //pasará la prueba
-		Assert.assertEquals(4, ejercicios.getListaEjercicio5().size()); //pasará la prueba
+		ArrayList<Integer> lista = ejercicios.getListaEjercicio5();
+		Assert.assertEquals(n4, lista.get(0).intValue()); //pasará la prueba
+		Assert.assertEquals(n3, lista.get(lista.size()-1).intValue()); //pasará la prueba
+		Assert.assertEquals(4, lista.size()); //pasará la prueba
 
 	}
 
