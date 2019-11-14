@@ -98,7 +98,7 @@ public class EjeciciosTest {
 	public void ejercicio4() {
 		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
 		LocalDate fecha = LocalDate.of(1995, 3, 11);
-		int anioActual = ejercicios.getAnios(fecha);
+		int anioActual = ejercicios.getAnios(fecha) + 1995;
 		
 		Assert.assertEquals(anioActual, 2019); //pasará la prueba
 
