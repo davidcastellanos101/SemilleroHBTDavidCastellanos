@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <b>Descripción:<b> Clase que determina
@@ -17,6 +19,7 @@ import java.util.Comparator;
 public class EjerciciosPOJO {
 	
 	private ArrayList<Integer> listaEjercicio5; 
+	private Map<String, ArrayList<Integer>> partido;
 	
 	
 	
@@ -25,6 +28,7 @@ public class EjerciciosPOJO {
 	 */
 	public EjerciciosPOJO() {
 		listaEjercicio5 = new ArrayList<Integer>();
+		partido = new HashMap<String, ArrayList<Integer>>();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -92,7 +96,31 @@ public class EjerciciosPOJO {
 	 *
 	 */
 	public void organizarElementosLista5() {
+		
 		Collections.sort(listaEjercicio5);
+	}
+	
+	/**
+	 * 
+	 * Metodo encargado de averiguar el ganador
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 * 
+	 * @return
+	 */
+	public String getGanador() {
+		int sumaRoger = 0;
+		int sumaDominic = 0;
+		for (Integer puntos : partido.get("Roger Federer")) {
+			sumaRoger = sumaRoger + puntos;
+		}
+		for (Integer puntos : partido.get("Dominic")) {
+			sumaDominic = sumaDominic + puntos;
+		}
+		if (sumaDominic > sumaRoger) {
+			return "Dominic";
+		}
+		return "Roger Federer";
 	}
 
 	/**
@@ -102,6 +130,15 @@ public class EjerciciosPOJO {
 	public ArrayList<Integer> getListaEjercicio5() {
 		return listaEjercicio5;
 	}
+
+	/**
+	 * Metodo encargado de retornar el valor del atributo partido
+	 * @return El partido asociado a la clase
+	 */
+	public Map<String, ArrayList<Integer>> getPartido() {
+		return partido;
+	}
+
 
 	
 }

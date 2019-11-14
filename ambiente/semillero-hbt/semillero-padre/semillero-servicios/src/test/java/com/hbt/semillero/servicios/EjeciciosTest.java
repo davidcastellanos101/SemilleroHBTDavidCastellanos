@@ -131,5 +131,29 @@ public class EjeciciosTest {
 		Assert.assertEquals(4, lista.size()); //pasará la prueba
 
 	}
+	
+	/**
+	 * ejercicio7
+	 * Metodo encargado de probar el ganador
+	 * <b>Caso de Uso</b>
+	 * @author Dave
+	 *
+	 */
+	@Test(enabled = true)
+	public void ejercicio7() {
+		EjerciciosPOJO ejercicios = new EjerciciosPOJO();
+		ArrayList<Integer> setRoger = new ArrayList<Integer>();
+		setRoger.add(3);
+		setRoger.add(2);
+		ArrayList<Integer> setDominic = new ArrayList<Integer>();
+		setDominic.add(6);
+		setDominic.add(2);
+		
+		ejercicios.getPartido().put("Roger Federer", setRoger);
+		ejercicios.getPartido().put("Dominic", setDominic);
+		
+		Assert.assertEquals(ejercicios.getGanador(), "Dominic");
+
+	}
 
 }
